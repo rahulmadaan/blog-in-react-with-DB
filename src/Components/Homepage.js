@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../Homepage.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Header from "./Header.js";
 import Body from "./Body.js";
@@ -12,7 +13,6 @@ class Homepage extends Component {
       userId: 1
     };
   }
-  
   render() {
     return (
       <div>

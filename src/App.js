@@ -1,11 +1,17 @@
 import React, { Component } from "react";
-import "./App.css";
-
 import Homepage from "./Components/Homepage.js";
+import CreatePost from "./CreatePost.js";
+
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
   render() {
-    return <Homepage />;
+    return (
+      <Router>
+        <Route path="/" exact component={Homepage} />
+        <Route path="/newPost" component={CreatePost} />
+      </Router>
+    );
   }
 }
 export default App;
