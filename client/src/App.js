@@ -5,7 +5,7 @@ import CreatePost from "./CreatePost.js";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component {
-  render() {
+  render(){
     return (
       <Router>
         <Route path="/" exact component={Homepage} />

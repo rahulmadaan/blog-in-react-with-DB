@@ -1,30 +1,25 @@
 {
-  "name": "login-server",
-  "version": "0.1.0",
-  "private": true,
+  "name": "blog-in-react-with-DB",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
-    "nodemon": "^1.18.11",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "^2.1.8"
+    "express": "^4.16.4"
   },
-  // "proxy":"http://localhost:8080",
+  "devDependencies": {},
   "scripts": {
-    "start": "node server.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahulmadaan/blog-in-react-with-DB.git"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rahulmadaan/blog-in-react-with-DB/issues"
+  },
+  "homepage": "https://github.com/rahulmadaan/blog-in-react-with-DB#readme"
 }

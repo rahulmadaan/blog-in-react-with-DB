@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
 const app = express();
-const { connection } = require("../src/dbConnection.js");
+const { connection } = require("../client/src/dbConnection.js");
 
 const getPostsBy = function(userId, res) {
   const qry = `select * from post where userId = ${userId}`;
@@ -48,7 +48,7 @@ const addPost = function(req, res) {
   res.send("ok");
 };
 const renderIndexFile = function(req, res) {
-  res.send(fs.readFileSync("./build/index.html", "utf8"));
+  res.send(fs.readFileSync("./client/build/index.html", "utf8"));
 };
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -57,6 +57,6 @@ app.use(bodyParser.text());
 app.get(/\/getPosts/, getPosts);
 app.get(/\/getPostHeaders/, getHeaders);
 app.post(/\/addPost/, addPost);
-app.use(express.static("build", { extensions: ["html"] }));
+app.use(express.static("./client/build/", { extensions: ["html"] }));
 app.use(renderIndexFile);
 module.exports = { app };
