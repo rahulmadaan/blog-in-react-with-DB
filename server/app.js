@@ -36,7 +36,6 @@ const insertPost = function(userId, title, body, footer) {
 };
 
 const getHeaders = function(req, res) {
-  console.log(req);
   const userId = getUserId(req.url);
   getHeadersBy(userId, res);
 };
@@ -51,6 +50,12 @@ const renderIndexFile = function(req, res) {
   res.send(fs.readFileSync("./client/build/index.html", "utf8"));
 };
 
+const logger = (req, res, next) => {
+  console.log(req.url);
+  next();
+};
+
+app.use(logger);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.text());
 
@@ -58,5 +63,6 @@ app.get(/\/getPosts/, getPosts);
 app.get(/\/getPostHeaders/, getHeaders);
 app.post(/\/addPost/, addPost);
 app.use(express.static("./client/build/", { extensions: ["html"] }));
+
 app.use(renderIndexFile);
 module.exports = { app };

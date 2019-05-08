@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../Homepage.css";
+import "../stylesheets/Homepage.css";
 import Post from "./Post.js";
 
 class Content extends Component {
@@ -18,7 +18,7 @@ class Content extends Component {
   render() {
     return (
       <div className="contents">
-        <Post posts={this.state.posts} />
+        <Post posts={this.state.posts} viewPost={this.props.viewPost} />
       </div>
     );
   }

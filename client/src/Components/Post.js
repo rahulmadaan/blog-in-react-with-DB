@@ -1,15 +1,24 @@
 import React, { Component } from "react";
-import "../Homepage.css";
+import { Link } from "react-router-dom";
+import "../stylesheets/Homepage.css";
 
 class Post extends Component {
   createPosts(posts) {
     return posts.map(post => {
       return (
-        <div className="post" id="post2">
-          <div className="post-header"> {post.postHeader}</div>
-          <div className="post-body"> {post.postBody}</div>
-          <div className="post-footer">{post.postFooter}</div>
-        </div>
+        <div className="post" id={post.postId} onClick={this.props.viewPost}>
+        <Link to="/viewPost">
+            <div className="post-header" id={post.postId}>
+              {post.postHeader}
+            </div>
+            <div className="post-body" id={post.postId}>
+              {post.postBody}
+            </div>
+            <div className="post-footer" id={post.postId}>
+              {post.postFooter}
+            </div>
+        </Link>
+          </div>
       );
     });
   }

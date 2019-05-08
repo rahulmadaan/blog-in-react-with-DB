@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./createNewPost.css";
+import "../stylesheets/createNewPost.css";
 import { Link } from "react-router-dom";
 
 class Header extends Component {
@@ -9,6 +9,7 @@ class Header extends Component {
         <button>
           <Link to="/">Home </Link>
         </button>
+        <Submit savePost={this.props.savePost} />
       </div>
     );
   }
@@ -18,11 +19,12 @@ class Title extends Component {
   render() {
     return (
       <div>
-        Title
+        {/* Title */}
         <input
           type="text"
           className="new-post-title"
           onChange={this.props.getTitle}
+          placeholder="Title"
         />
       </div>
     );
@@ -37,6 +39,7 @@ class PostBody extends Component {
         // value="Post"
         className="new-post-body"
         onChange={this.props.getBody}
+        placeholder="Body"
       />
     );
   }
@@ -45,11 +48,12 @@ class PostFooter extends Component {
   render() {
     return (
       <div>
-        Footer
+        {/* Footer */}
         <input
           type="text"
           className="new-post-footer"
           onChange={this.props.getFooter}
+          placeholder="Footer"
         />
       </div>
     );
@@ -102,12 +106,11 @@ class CreatePost extends Component {
   render() {
     return (
       <div className="createNewPost">
-        <Header />
+        <Header savePost={this.savePost.bind(this)} />
         <div className="newPost">
           <Title getTitle={this.getTitle.bind(this)} />
           <PostBody getBody={this.getBody.bind(this)} />
           <PostFooter getFooter={this.getFooter.bind(this)} />
-          <Submit savePost={this.savePost.bind(this)} />
         </div>
       </div>
     );

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../Homepage.css";
+import "../stylesheets/Homepage.css";
 
 class SideBar extends Component {
   constructor(props) {

@@ -2,6 +2,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  text-decoration: none;
 }
 
 .header {
@@ -57,18 +58,16 @@ body {
   height: 400px;
   width: 100%;
   border: 1px solid black;
-  border-radius: 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  /* border-radius: 20px; */
+  margin-top: 40px;
 }
 
 .post-header {
-  height: 20%;
+  height: 15%;
   width: 100%;
   word-break: break-all;
   text-align: center;
+  background-color: gray;
   font-size: 32px;
 }
 .post-body {
@@ -77,6 +76,7 @@ body {
   text-align: center;
   word-break: break-word;
   font-size: 26px;
+  background-color: antiquewhite;
 }
 .post-footer {
   height: 20%;

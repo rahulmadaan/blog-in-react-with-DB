@@ -1,0 +1,68 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.createNewPost {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newPost {
+  width: 75%;
+  height: 100%;
+}
+
+.new-post-header {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.new-post-title {
+  width: 100%;
+  height: 70px;
+  border: none;
+  text-align: center;
+  border: 1px solid #15cda8;
+  border-radius: 13px;
+  font-size: 30px;
+  outline: none;
+}
+
+.new-post-body {
+  width: 100%;
+  height: 450px;
+  border: none;
+  outline: none;
+
+  text-align: center;
+  margin-top: 10px;
+  border: 1px solid #15cda8;
+  border-radius: 13px;
+  font-size: 30px;
+}
+
+.new-post-footer {
+  width: 100%;
+  height: 70px;
+  border: none;
+  outline: none;
+  text-align: center;
+  margin-top: 10px;
+  border: 1px solid #15cda8;
+  border-radius: 13px;
+  font-size: 30px;
+}
+.submit-btn {
+  width: 90%;
+  height: 100%;
+}
